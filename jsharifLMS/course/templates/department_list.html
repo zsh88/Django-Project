@@ -1,0 +1,12 @@
+{% extends 'base_template.html' %}
+
+{% block myblock %}
+    <h2>Here, You can see list of course</h2>
+    <ul>
+        
+        {% for item in department_list_ds %}
+        <li> Department Title: {{ item.title }}</li>
+        <a href="http://127.0.0.1/show_course_list/{{ item.id }}">{{ item.title }}</a>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base_template.html' %}
+
+
+{% block myblock %}
+    <h2> Profile Page </h2>
+    <form method="POST" action="/save_profile/">
+    Username: <b>{{ Username }}</b>
+    </br>
+    FirstName: <input type="text" value = {{ FirstName }} name = "firstname" id="firstname">
+    </br>
+    LastName: <input type="text" value = {{ LastName }} name = "lastname" id="lastname">
+    </br>
+    Email: <input type="text" value = {{ Email }} name = "email" id="email">
+    </br>
+    <input type="submit" value="Change User Profile">
+</form>
+{% endblock %}

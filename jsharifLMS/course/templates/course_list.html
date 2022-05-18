@@ -1,0 +1,14 @@
+
+{% extends 'base_template.html' %}
+
+
+{% block myblock %}
+    <h2>Welcome {{ UName }}</h2>
+    <h2>Here, You can see list of course</h2>
+    <ul>
+        {% for item in course_list_ds %}
+        <li>Course Code: {{ item.code }}, Course Name: {{ item.title }}</li>
+        {% endfor %}
+    
+    </ul>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base_template.html' %}
+
+
+{% block myblock%}
+    <h1> User Registration</h1>
+    <form method="POST" action="/save_user/">
+        {% csrf_token %}    
+        Username: <input type="text" name = "username" id="username">
+        <br>
+        Email: <input type="email" name="email" id="email" width="240">
+        <br>
+        Password: <input type="password" name="password" id="password">
+        <br>
+        <input type="submit" value="Register ....">
+    </form>
+{% endblock %}
